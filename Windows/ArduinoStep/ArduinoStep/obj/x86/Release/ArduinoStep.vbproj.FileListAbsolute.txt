@@ -1,0 +1,9 @@
+C:\Users\alexa\documents\visual studio 2010\Projects\ArduinoStep\ArduinoStep\bin\Release\ArduinoStep.exe
+C:\Users\alexa\documents\visual studio 2010\Projects\ArduinoStep\ArduinoStep\bin\Release\ArduinoStep.pdb
+C:\Users\alexa\documents\visual studio 2010\Projects\ArduinoStep\ArduinoStep\bin\Release\ArduinoStep.xml
+C:\Users\alexa\documents\visual studio 2010\Projects\ArduinoStep\ArduinoStep\obj\x86\Release\ArduinoStep.Form1.resources
+C:\Users\alexa\documents\visual studio 2010\Projects\ArduinoStep\ArduinoStep\obj\x86\Release\ArduinoStep.Resources.resources
+C:\Users\alexa\documents\visual studio 2010\Projects\ArduinoStep\ArduinoStep\obj\x86\Release\ArduinoStep.vbproj.GenerateResource.Cache
+C:\Users\alexa\documents\visual studio 2010\Projects\ArduinoStep\ArduinoStep\obj\x86\Release\ArduinoStep.exe
+C:\Users\alexa\documents\visual studio 2010\Projects\ArduinoStep\ArduinoStep\obj\x86\Release\ArduinoStep.xml
+C:\Users\alexa\documents\visual studio 2010\Projects\ArduinoStep\ArduinoStep\obj\x86\Release\ArduinoStep.pdb

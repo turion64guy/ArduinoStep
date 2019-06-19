@@ -1,0 +1,18 @@
+C:\Users\alexa\AppData\Local\Temporary Projects\ArduinoStep\bin\Debug\ArduinoStep.exe
+C:\Users\alexa\AppData\Local\Temporary Projects\ArduinoStep\bin\Debug\ArduinoStep.pdb
+C:\Users\alexa\AppData\Local\Temporary Projects\ArduinoStep\bin\Debug\ArduinoStep.xml
+C:\Users\alexa\AppData\Local\Temporary Projects\ArduinoStep\obj\x86\Debug\ArduinoStep.Form1.resources
+C:\Users\alexa\AppData\Local\Temporary Projects\ArduinoStep\obj\x86\Debug\ArduinoStep.Resources.resources
+C:\Users\alexa\AppData\Local\Temporary Projects\ArduinoStep\obj\x86\Debug\ArduinoStep.vbproj.GenerateResource.Cache
+C:\Users\alexa\AppData\Local\Temporary Projects\ArduinoStep\obj\x86\Debug\ArduinoStep.exe
+C:\Users\alexa\AppData\Local\Temporary Projects\ArduinoStep\obj\x86\Debug\ArduinoStep.xml
+C:\Users\alexa\AppData\Local\Temporary Projects\ArduinoStep\obj\x86\Debug\ArduinoStep.pdb
+C:\Users\alexa\documents\visual studio 2010\Projects\ArduinoStep\ArduinoStep\obj\x86\Debug\ArduinoStep.exe
+C:\Users\alexa\documents\visual studio 2010\Projects\ArduinoStep\ArduinoStep\obj\x86\Debug\ArduinoStep.xml
+C:\Users\alexa\documents\visual studio 2010\Projects\ArduinoStep\ArduinoStep\obj\x86\Debug\ArduinoStep.pdb
+C:\Users\alexa\documents\visual studio 2010\Projects\ArduinoStep\ArduinoStep\bin\Debug\ArduinoStep.exe
+C:\Users\alexa\documents\visual studio 2010\Projects\ArduinoStep\ArduinoStep\bin\Debug\ArduinoStep.pdb
+C:\Users\alexa\documents\visual studio 2010\Projects\ArduinoStep\ArduinoStep\bin\Debug\ArduinoStep.xml
+C:\Users\alexa\documents\visual studio 2010\Projects\ArduinoStep\ArduinoStep\obj\x86\Debug\ArduinoStep.Form1.resources
+C:\Users\alexa\documents\visual studio 2010\Projects\ArduinoStep\ArduinoStep\obj\x86\Debug\ArduinoStep.Resources.resources
+C:\Users\alexa\documents\visual studio 2010\Projects\ArduinoStep\ArduinoStep\obj\x86\Debug\ArduinoStep.vbproj.GenerateResource.Cache
