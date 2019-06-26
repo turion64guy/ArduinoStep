@@ -210,7 +210,7 @@
         End If
     End Sub
 
-    Private Sub BGWserial1_DoWork(ByVal sender As System.Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles BGWserial1.DoWork
+    Private Sub BGWserial1_DoWork(ByVal sender As System.Object, ByVal e As System.ComponentModel.DoWorkEventArgs) Handles BGWserial1.DoWork 'not used.
         If Not e.Argument = Nothing Then
             While SerialPort1.ReadExisting Is Nothing
                 MessageBox.Show("loli")
