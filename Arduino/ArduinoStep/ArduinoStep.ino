@@ -2,7 +2,7 @@
 
 int serialconnected = 1;
 String serialrx = "";
-String Cversion = "sta:V0.1b:";
+String Cversion = "sta:V0.2b:";
 int up_old = 0;
 int down_old = 0;
 int left_old = 0;
@@ -12,7 +12,7 @@ int down_curr = 0;
 int left_curr = 0;
 int right_curr = 0;
 const int threshold = 13; //threshold
-const int up_threshold = 15; //threshold up arrow
+const int up_threshold = 15; //threshold up arrow. Different from other thresholds because my pad is built like shit.
 const int down_threshold = threshold;
 const int left_threshold = threshold;
 const int right_threshold = threshold;
@@ -21,16 +21,8 @@ const int down_pin = 3;
 const int left_pin = 4;
 const int right_pin = 5;
 const int serial_speed = 19200;  //serial baud
-/*const String up_press = ".u_p.";        //old protocol
-const String down_press = ".d_p.";
-const String left_press = ".l_p.";
-const String right_press = ".r_p.";
-const String up_release = ".u_r.";
-const String down_release = ".d_r.";
-const String left_release = ".l_r.";
-const String right_release = ".r_r.";*/
-
-const String up_press = ".up";
+/*
+const String up_press = ".up";   //old shitty protocol
 const String down_press = ".dp";
 const String left_press = ".lp";
 const String right_press = ".rp";
@@ -39,6 +31,17 @@ const String up_release = ".ur";
 const String down_release = ".dr";
 const String left_release = ".lr";
 const String right_release = ".rr";
+*/
+                                // I know, that's an ugly way to encode this kind of data, but i wanted to transmit the least amount of bytes possible
+const byte up_press = 0x01;     
+const byte down_press = 0x02;   
+const byte left_press = 0x03;   
+const byte right_press = 0x04;  
+
+const byte up_release = 0x05;   
+const byte down_release = 0x06; 
+const byte left_release = 0x07; 
+const byte right_release = 0x08;
 
 long lastDebounceTime_up = 0;  // the last time the output pin was toggled
 long debounceDelay_up = 50;    // the debounce time; increase if the output flickers
@@ -80,10 +83,10 @@ void up(){
   //Serial.println(up_curr);
   if(up_curr!=up_old){
     if(up_curr==1){
-      Serial.print(up_press);
+      Serial.write(up_press);
       lastDebounceTime_up = millis();
     }else{
-      Serial.print(up_release);
+      Serial.write(up_release);
       lastDebounceTime_up = millis();
     }
   }
@@ -103,10 +106,10 @@ void down(){
   //Serial.println(down_curr);
   if(down_curr!=down_old){
     if(down_curr==1){
-      Serial.print(down_press);
+      Serial.write(down_press);
       lastDebounceTime_down = millis();
     }else{
-      Serial.print(down_release);
+      Serial.write(down_release);
       lastDebounceTime_down = millis();
     }
   }
@@ -126,10 +129,10 @@ void left(){
   //Serial.println(left_curr);
   if(left_curr!=left_old){
     if(left_curr==1){
-      Serial.print(left_press);
+      Serial.write(left_press);
       lastDebounceTime_left = millis();
     }else{
-      Serial.print(left_release);
+      Serial.write(left_release);
       lastDebounceTime_left = millis();
     }
   }
@@ -149,10 +152,10 @@ void right(){
   //Serial.println(right_curr);
   if(right_curr!=right_old){
     if(right_curr==1){
-      Serial.print(right_press);
+      Serial.write(right_press);
       lastDebounceTime_right = millis();
     }else{
-      Serial.print(right_release);
+      Serial.write(right_release);
       lastDebounceTime_right = millis();
     }
   }
@@ -228,4 +231,3 @@ void serialEvent() {
     }
   }
 }
-

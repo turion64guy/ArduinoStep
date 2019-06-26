@@ -4,19 +4,19 @@
     Public Const KEYEVENTF_EXTENDEDKEY = &H1    'Key DOWN
     Public Const KEYEVENTF_KEYUP = &H2          'Key UP
 
-    Public Const up_press As String = ".up"
-    Public Const down_press As String = ".dp"
-    Public Const left_press As String = ".lp"
-    Public Const right_press As String = ".rp"
-    Public Const up_rel As String = ".ur"
-    Public Const down_rel As String = ".dr"
-    Public Const left_rel As String = ".lr"
-    Public Const right_rel As String = ".rr"
+    Public Const up_press As Byte = &H1     '0x01
+    Public Const down_press As Byte = &H2   '0x02
+    Public Const left_press As Byte = &H3   '0x03
+    Public Const right_press As Byte = &H4  '0x04
+    Public Const up_rel As Byte = &H5       '0x05
+    Public Const down_rel As Byte = &H6     '0x06
+    Public Const left_rel As Byte = &H7     '0x07
+    Public Const right_rel As Byte = &H8    '0x08
 
-    Dim ver As String = "0.1b"
+    Dim ver As String = "0.2b"
     Dim comPlayer1 As String
     Dim controlVersion1 As String
-    Dim RXdata As String
+    Dim RXdata As Byte
 
     Private Function reloadCOMList()
         Dim noserial As String = 0
@@ -73,7 +73,7 @@
                 ElseIf serialoutput.Contains("sta:") Then
                     conSerial1.BackColor = Color.Green
                     controlVersion1 = serialoutput.Split(New Char() {":"c})(1)
-                    controlStatusP1.Text = "Controller connected : " & controlVersion1 & " (" & comPlayer1 & ")"
+                    controlStatusP1.Text = "Controller connected [" & controlVersion1 & "] (" & comPlayer1 & ")"
                     conSerial1.Enabled = False
                     AddHandler SerialPort1.DataReceived, AddressOf SerialPort1_DataReceived
                 ElseIf Not serialoutput.Contains("sta:") Then
@@ -103,10 +103,10 @@
         keybd_event(Keys.Left, MapVirtualKey(Keys.Left, 0), KEYEVENTF_EXTENDEDKEY Or KEYEVENTF_KEYUP, 0)
         keybd_event(Keys.Right, MapVirtualKey(Keys.Right, 0), KEYEVENTF_EXTENDEDKEY Or KEYEVENTF_KEYUP, 0)
     End Sub
-    Delegate Sub ParseSerialDel(ByVal serialRX As String)
+    Delegate Sub ParseSerialDel(ByVal serialRX As Byte)
     Private Sub SerialPort1_DataReceived(ByVal sender As Object, ByVal e As System.IO.Ports.SerialDataReceivedEventArgs)
         Dim ParseSerial1 = New ParseSerialDel(AddressOf ParseSerial)
-        RXdata = SerialPort1.ReadExisting
+        RXdata = SerialPort1.ReadByte
         Me.Invoke(ParseSerial1, RXdata)
     End Sub
     Private Sub ParseSerial(ByVal serialRX As String)
